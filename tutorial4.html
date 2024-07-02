@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial 4</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .main {
+        text-align: center;
+        margin-top: 20px;
+      }
+      .Personal,
+      .Booking {
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+        border-radius: 10px;
+      }
+      .Personal {
+        background-color: rgb(168, 221, 249);
+      }
+      #first-name, #surname, #email{
+        margin-right: 264px;
+      }
+      #password{
+        width: 440px;
+      }
+      .Booking {
+        background-color: rgb(255, 233, 195);
+      }
+      .Buttons {
+        background-color: rgba(152, 86, 51, 0.912);
+        text-align: center;
+        border-radius: 14px;
+      }
+      legend {
+        background-color: rgb(203, 231, 248);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      label {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .Buttons input {
+        background-color: rgb(134, 172, 205);
+        color: rgb(212, 248, 248);
+        border: 1px solid;
+        padding: 10px 20px;
+        border-radius: 4px;
+        margin: 5px;
+        cursor: pointer;
+        float: right;
+      }
+      .Buttons input:hover {
+        background-color: rgb(114, 152, 185);
+      }
+      .Buttons input:active{
+        background-color: rgb(132, 169, 202);
+      }
+      .radio-group, .breakfast-group {
+        display: flex;
+        gap: 10px;
+      }
+      .radio-group{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+      }
+      .radio-group input{
+        margin-right: 414px;
+      }
+      .radio-group input:hover{
+        cursor: pointer;
+      }
+      #checkin{
+        margin-right: 316px;
+      }
+      #breakfast{
+        margin-right: 334px;
+        overflow: hidden;
+      }
+      #breakfast:hover{
+        cursor: pointer;
+      }
+      #requirements{
+        margin-right: 273px;
+        height: 60px;
+        width: 180px;
+      }
+      #days{
+        margin-right: 260px;
+      }
+      #checkin:hover{
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="main">Hotel Reservation</h1>
+    <form class="container">
+      <fieldset class="Personal">
+        <legend>Personal Details</legend>
+        <label for="first-name">
+          First name:
+          <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+        </label>
+        <label for="surname">
+          Surname:
+          <input type="text" id="surname" name="surname" placeholder="Enter your surname" required>
+        </label>
+        <label for="email">
+          Email address:
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </label>
+        <label for="password">
+          Setup a password:
+          <input type="password" id="password" name="password" placeholder="Min 8 characters, use at least 1 capital letter, no special characters" minlength="8" required>
+        </label>
+      </fieldset>
+      <fieldset class="Booking">
+        <legend>Booking Details</legend>
+        <label for="checkin">
+          Check-In day:
+          <input type="date" id="checkin" name="checkin" required>
+        </label>
+        <label for="days">
+          Number of days:
+          <input type="number" id="days" name="days" min="1" required>
+        </label>
+        <div class="radio-group">
+          <label for="single">
+            Single Room
+            <input type="radio" id="single" name="roompreference" value="single" required>
+          </label>
+          <label for="double">
+            Double Room
+            <input type="radio" id="double" name="roompreference" value="double" required>
+          </label>
+          <label for="king">
+            King Room
+            <input type="radio" id="king" name="roompreference" value="king" required>
+          </label>
+        </div>
+        <label for="breakfast">
+          Breakfast:
+          <select id="breakfast" name="breakfast" required>
+            <option value="food1">Food item 1</option>
+            <option value="food2" selected>Food item 2</option>
+            <option value="food3">Food item 3</option>
+          </select>
+        </label>
+        <label for="requirements">
+          Special Requirements:
+          <textarea id="requirements" name="requirements" placeholder="Please provide any special requirements"></textarea>
+        </label>
+      </fieldset>
+      <fieldset class="Buttons">
+        <input type="submit" value="Send">
+        <input type="reset" value="Reset">
+      </fieldset>
+    </form><hr>
+    <address>sandarumalshan@gmail.com</address>
+    <p>Last modified: 10<sup>th</sup> June 2024</p>
+  </body>
+</html>
